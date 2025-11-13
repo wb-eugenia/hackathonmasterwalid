@@ -5,8 +5,6 @@
 import { Customer, LoyaltyCard, LoyaltyTransaction } from '../types/loyalty';
 import { apiRequest } from './apiService';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
-
 // ===== Clients =====
 
 export const customerService = {

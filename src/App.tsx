@@ -13,8 +13,6 @@ import { LandingPage } from './components/Landing/LandingPage';
 import { LoginForm } from './components/Auth/LoginForm';
 import { RegisterForm } from './components/Auth/RegisterForm';
 import { RestaurantSearch } from './components/Search/RestaurantSearch';
-import { ReviewsDashboard } from './components/Dashboard/ReviewsDashboard';
-import { LoyaltyDashboard } from './components/Loyalty/LoyaltyDashboard';
 import { OnboardingWizard } from './components/Onboarding/OnboardingWizard';
 import { EstablishmentSelector } from './components/Establishment/EstablishmentSelector';
 import { MainDashboard } from './components/Dashboard/MainDashboard';

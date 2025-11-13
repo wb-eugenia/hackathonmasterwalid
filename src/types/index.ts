@@ -17,6 +17,9 @@ export interface Restaurant {
   placeId?: string; // ID Google Places (pour le scrapper réel)
 }
 
+// Alias pour compatibilité
+export type Establishment = Restaurant;
+
 // Types pour les avis
 export interface Review {
   id: string;

@@ -35,7 +35,7 @@ export const RegisterForm: React.FC = () => {
 
     setIsLoading(true);
     try {
-      const response = await authService.register({ email, password, name });
+      await authService.register({ email, password, name });
       setSuccess('Compte créé ! Un email de vérification a été envoyé.');
       
       // Auto-login après inscription

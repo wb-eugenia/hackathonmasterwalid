@@ -3,8 +3,8 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { LoyaltyCard, Customer } from '../../types/loyalty';
-import { loyaltyCardService, customerService } from '../../services/loyaltyService';
+import { LoyaltyCard } from '../../types/loyalty';
+import { loyaltyCardService } from '../../services/loyaltyService';
 import { CardScanner } from './CardScanner';
 import { CardList } from './CardList';
 import { CardDetailModal } from './CardDetailModal';

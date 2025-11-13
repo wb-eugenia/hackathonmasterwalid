@@ -9,10 +9,10 @@ import './CardList.css';
 interface CardListProps {
   cards: LoyaltyCard[];
   onCardSelect: (card: LoyaltyCard) => void;
-  onRefresh: () => void;
+  onRefresh?: () => void;
 }
 
-export const CardList: React.FC<CardListProps> = ({ cards, onCardSelect, onRefresh }) => {
+export const CardList: React.FC<CardListProps> = ({ cards, onCardSelect }) => {
   const [filter, setFilter] = useState<'all' | 'active' | 'inactive' | 'linked' | 'unlinked'>('all');
 
   const filteredCards = cards.filter((card) => {
