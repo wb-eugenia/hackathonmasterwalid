@@ -3,7 +3,17 @@
  * Remplace les services mockés par des appels réels au backend
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
+// Détermine l'URL de l'API selon l'environnement
+const getApiBaseUrl = () => {
+  // Si VITE_API_BASE_URL est définie, l'utiliser (production)
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  // Sinon, utiliser localhost pour le développement
+  return 'http://localhost:3000/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 /**
  * Récupère le token d'authentification depuis le localStorage
