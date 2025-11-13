@@ -26,7 +26,7 @@ database_id = "VOTRE_DATABASE_ID_ICI"
 
 ```bash
 # Applique les migrations en production
-wrangler d1 migrations apply restaurant-reviews-db
+wrangler d1 migrations apply hackathondb
 
 # Ou en local pour tester
 wrangler d1 migrations apply hackathondb --local
@@ -82,7 +82,7 @@ Le backend sera disponible sur : `https://hackathonwalid.VOTRE_SUBDOMAIN.workers
 
 5. Variables d'environnement (Settings > Environment variables) :
    ```
-   VITE_API_BASE_URL=https://restaurant-reviews-backend.VOTRE_SUBDOMAIN.workers.dev/api
+   VITE_API_BASE_URL=https://hackathonwalid.VOTRE_SUBDOMAIN.workers.dev/api
    VITE_GOOGLE_PLACES_API_KEY=votre_cle_api_google
    ```
 

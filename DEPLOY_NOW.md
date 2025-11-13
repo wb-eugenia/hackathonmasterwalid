@@ -58,7 +58,7 @@ npm run deploy
    - Build command: `npm run build`
    - Build output: `dist`
 4. Variables d'environnement :
-   - `VITE_API_BASE_URL` = `https://restaurant-reviews-backend.xxx.workers.dev/api`
+   - `VITE_API_BASE_URL` = `https://hackathonwalid.xxx.workers.dev/api`
    - `VITE_GOOGLE_PLACES_API_KEY` = votre clé API
 
 #### Option B : Build manuel
