@@ -1,0 +1,23 @@
+name = "restaurant-reviews-backend"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Configuration Cloudflare D1
+[[d1_databases]]
+binding = "DB"
+database_name = "restaurant-reviews-db"
+database_id = "YOUR_DATABASE_ID" # À remplacer par votre ID de base de données
+
+# Variables d'environnement (pour développement local)
+[vars]
+NODE_ENV = "production"
+
+# Secrets (à configurer via wrangler secret put)
+# JWT_SECRET
+# GOOGLE_PLACES_API_KEY
+# OPENAI_API_KEY (optionnel)
+# FRONTEND_URL (pour les emails de vérification)
+
+# Routes (pour Workers)
+routes = []

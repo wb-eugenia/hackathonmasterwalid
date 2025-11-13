@@ -1,0 +1,133 @@
+.card-list-container {
+  margin-top: 20px;
+}
+
+.card-list-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.card-list-filters button {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.card-list-filters button:hover {
+  background-color: #f5f5f5;
+}
+
+.card-list-filters button.active {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.card-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-number {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-active {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+
+.badge-inactive {
+  background-color: #fff3e0;
+  color: #ff9800;
+}
+
+.badge-expired {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.badge-blocked {
+  background-color: #f3e5f5;
+  color: #9c27b0;
+}
+
+.card-info {
+  margin-bottom: 8px;
+}
+
+.card-customer {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card-customer-unlinked {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.card-email {
+  font-size: 12px;
+  color: #999;
+}
+
+.card-points {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+.card-code {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
