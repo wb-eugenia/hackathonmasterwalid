@@ -24,7 +24,7 @@ GitGuardian a détecté qu'une clé API Google était exposée dans le dépôt G
 La clé exposée doit être révoquée pour des raisons de sécurité :
 
 1. Allez sur [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
-2. Trouvez la clé API `AIzaSyBP10WJhmsYciKfnhxbuW3JfZXe170OuNk`
+2. Trouvez la clé API qui a été exposée (commence par `AIzaSy...`)
 3. Cliquez sur "Révoquer" ou "Supprimer"
 4. Créez une nouvelle clé API avec les mêmes restrictions
 
