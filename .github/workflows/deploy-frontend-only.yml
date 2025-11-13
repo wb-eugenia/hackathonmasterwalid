@@ -41,7 +41,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: hackathonwalid-frontend
+          projectName: hackathonwalid
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 

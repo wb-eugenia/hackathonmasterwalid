@@ -9,7 +9,7 @@ Cloudflare Pages essaie d'exécuter `npx wrangler deploy` au lieu d'utiliser le 
 ### Étape 1 : Vérifier la Configuration Cloudflare Pages
 
 1. Allez sur [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. **Pages** > Votre projet (`hackathonwalid-frontend`)
+2. **Pages** > Votre projet (`hackathonwalid`)
 3. **Settings** > **Builds & deployments**
 
 ### Étape 2 : Configuration Requise
@@ -49,7 +49,7 @@ Si le projet n'existe pas encore :
 
 ```powershell
 # Via CLI (optionnel)
-npx wrangler pages project create hackathonwalid-frontend
+npx wrangler pages project create hackathonwalid
 ```
 
 Ou créez-le manuellement dans le Dashboard.
@@ -63,7 +63,7 @@ Si GitHub Actions ne fonctionne pas :
 npm run build
 
 # Déployer
-npx wrangler pages deploy dist --project-name=hackathonwalid-frontend
+npx wrangler pages deploy dist --project-name=hackathonwalid
 ```
 
 ## Vérification
@@ -71,7 +71,7 @@ npx wrangler pages deploy dist --project-name=hackathonwalid-frontend
 Après configuration, le déploiement devrait :
 1. ✅ Build réussir (`npm run build`)
 2. ✅ Déployer via `cloudflare/pages-action@v1` (pas wrangler)
-3. ✅ Afficher l'URL : `https://hackathonwalid-frontend.pages.dev`
+3. ✅ Afficher l'URL : `https://hackathonwalid.pages.dev`
 
 ## Erreur "Missing entry-point"
 
