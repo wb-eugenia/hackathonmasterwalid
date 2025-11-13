@@ -68,4 +68,5 @@ jobs:
           projectName: hackathonwalid-frontend
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
 
