@@ -7,8 +7,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "hackathondb"
-database_id = "YOUR_DATABASE_ID" # À remplacer par votre ID de base de données
-
+database_id = "55a73d96-9dda-4d4a-a585-68df69080ebf"
 # Variables d'environnement (pour développement local)
 [vars]
 NODE_ENV = "production"
