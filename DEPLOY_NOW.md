@@ -46,7 +46,7 @@ wrangler secret put FRONTEND_URL
 npm run deploy
 ```
 
-**✅ Copiez l'URL du Worker affichée** (ex: `https://restaurant-reviews-backend.xxx.workers.dev`)
+**✅ Copiez l'URL du Worker affichée** (ex: `https://hackathonwalid.xxx.workers.dev`)
 
 ### 7. Déployer le frontend
 
@@ -101,6 +101,6 @@ cd backend
 npm run deploy
 
 # Voir les migrations
-wrangler d1 migrations list restaurant-reviews-db
+wrangler d1 migrations list hackathondb
 ```
 

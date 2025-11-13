@@ -61,8 +61,8 @@ git push
 ## 📊 URLs
 
 - **Repository GitHub** : https://github.com/wb-eugenia/hackathonmasterwalid
-- **Backend Worker** : (après déploiement) `https://restaurant-reviews-backend.xxx.workers.dev`
-- **Frontend Pages** : (après déploiement) `https://restaurant-reviews-frontend.pages.dev`
+- **Backend Worker** : (après déploiement) `https://hackathonwalid.xxx.workers.dev`
+- **Frontend Pages** : (après déploiement) `https://hackathonwalid-frontend.pages.dev`
 
 ## ✅ Checklist
 

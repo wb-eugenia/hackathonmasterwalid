@@ -10,7 +10,7 @@
 
 ```bash
 cd backend
-wrangler d1 create restaurant-reviews-db
+wrangler d1 create hackathondb
 ```
 
 Cela affichera un `database_id`. **Copiez-le** et mettez-le à jour dans `wrangler.toml` :
@@ -18,7 +18,7 @@ Cela affichera un `database_id`. **Copiez-le** et mettez-le à jour dans `wrangl
 ```toml
 [[d1_databases]]
 binding = "DB"
-database_name = "restaurant-reviews-db"
+database_name = "hackathondb"
 database_id = "VOTRE_DATABASE_ID_ICI"
 ```
 
@@ -29,7 +29,7 @@ database_id = "VOTRE_DATABASE_ID_ICI"
 wrangler d1 migrations apply restaurant-reviews-db
 
 # Ou en local pour tester
-wrangler d1 migrations apply restaurant-reviews-db --local
+wrangler d1 migrations apply hackathondb --local
 ```
 
 Les migrations seront appliquées dans l'ordre :
@@ -65,7 +65,7 @@ npm install
 npm run deploy
 ```
 
-Le backend sera disponible sur : `https://restaurant-reviews-backend.VOTRE_SUBDOMAIN.workers.dev`
+Le backend sera disponible sur : `https://hackathonwalid.VOTRE_SUBDOMAIN.workers.dev`
 
 ## 🌐 Étape 5 : Déployer le Frontend
 
@@ -131,14 +131,14 @@ wrangler secret put FRONTEND_URL
 
 ```bash
 # Liste les migrations appliquées
-wrangler d1 migrations list restaurant-reviews-db
+wrangler d1 migrations list hackathondb
 ```
 
 ### Accéder à la base de données
 
 ```bash
 # Exécute une requête SQL
-wrangler d1 execute restaurant-reviews-db --command "SELECT COUNT(*) FROM users"
+wrangler d1 execute hackathondb --command "SELECT COUNT(*) FROM users"
 ```
 
 ## 📝 Notes Importantes

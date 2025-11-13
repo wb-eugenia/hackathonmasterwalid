@@ -10,7 +10,7 @@
 
 ### Configuration
 - [ ] Dépendances installées : `cd backend && npm install`
-- [ ] Base D1 créée : `npm run db:create`
+- [ ] Base D1 créée (nom: hackathondb) : `npm run db:create`
 - [ ] `database_id` copié et mis à jour dans `wrangler.toml`
 - [ ] Migrations appliquées : `npm run db:migrate`
 

@@ -75,7 +75,7 @@ npm run deploy
 
 Le déploiement peut prendre 1-2 minutes. À la fin, vous verrez :
 ```
-✨  Deployed to https://restaurant-reviews-backend.VOTRE_SUBDOMAIN.workers.dev
+✨  Deployed to https://hackathonwalid.VOTRE_SUBDOMAIN.workers.dev
 ```
 
 **Copiez cette URL** - vous en aurez besoin pour le frontend.
@@ -84,7 +84,7 @@ Le déploiement peut prendre 1-2 minutes. À la fin, vous verrez :
 
 ```bash
 # Test de santé
-curl https://restaurant-reviews-backend.VOTRE_SUBDOMAIN.workers.dev/health
+curl https://hackathonwalid.VOTRE_SUBDOMAIN.workers.dev/health
 
 # Devrait retourner : {"status":"ok","timestamp":"..."}
 ```
@@ -104,7 +104,7 @@ curl https://restaurant-reviews-backend.VOTRE_SUBDOMAIN.workers.dev/health
 
 5. **Environment variables** (Settings > Variables) :
    ```
-   VITE_API_BASE_URL = https://restaurant-reviews-backend.VOTRE_SUBDOMAIN.workers.dev/api
+   VITE_API_BASE_URL = https://hackathonwalid.VOTRE_SUBDOMAIN.workers.dev/api
    VITE_GOOGLE_PLACES_API_KEY = votre_cle_api_google
    ```
 
@@ -153,10 +153,10 @@ wrangler secret put NOM_SECRET
 wrangler secret delete NOM_SECRET
 
 # Voir les migrations appliquées
-wrangler d1 migrations list restaurant-reviews-db
+wrangler d1 migrations list hackathondb
 
 # Exécuter une requête SQL
-wrangler d1 execute restaurant-reviews-db --command "SELECT COUNT(*) FROM users"
+wrangler d1 execute hackathondb --command "SELECT COUNT(*) FROM users"
 
 # Redéployer
 npm run deploy
