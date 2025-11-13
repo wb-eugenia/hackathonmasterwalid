@@ -25,7 +25,7 @@ Dans votre projet Cloudflare Pages, configurez ces variables d'environnement :
 ### Comment Configurer
 
 1. Allez sur [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. Sélectionnez **Pages** > Votre projet (`hackathonwalid-frontend`)
+2. Sélectionnez **Pages** > Votre projet (`hackathonwalid`)
 3. Allez dans **Settings** > **Environment variables**
 4. Ajoutez les deux variables ci-dessus
 5. Redéployez le projet
@@ -42,6 +42,6 @@ VITE_GOOGLE_PLACES_API_KEY=votre_cle_api_google
 ## URLs de Production
 
 - **Backend API** : `https://hackathonwalid.wbouzidane.workers.dev`
-- **Frontend** : `https://hackathonwalid-frontend.pages.dev` (après déploiement)
+- **Frontend** : `https://hackathonwalid.pages.dev` (après déploiement)
 - **API Endpoint** : `https://hackathonwalid.wbouzidane.workers.dev/api`
 
