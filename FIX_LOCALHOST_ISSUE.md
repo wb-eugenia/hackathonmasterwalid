@@ -12,7 +12,7 @@ Le code compilé contient toujours `localhost:3000` parce que le build a été f
 
 ```env
 VITE_API_BASE_URL=https://hackathonwalid.wbouzidane.workers.dev/api
-VITE_GOOGLE_PLACES_API_KEY=AIzaSyBP10WJhmsYciKfnhxbuW3JfZXe170OuNk
+VITE_GOOGLE_PLACES_API_KEY=votre_cle_api_google_places
 ```
 
 2. Build et déployez :

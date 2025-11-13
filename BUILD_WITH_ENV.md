@@ -14,7 +14,7 @@ Créez un fichier `.env.production` à la racine du projet :
 
 ```env
 VITE_API_BASE_URL=https://hackathonwalid.wbouzidane.workers.dev/api
-VITE_GOOGLE_PLACES_API_KEY=AIzaSyBP10WJhmsYciKfnhxbuW3JfZXe170OuNk
+VITE_GOOGLE_PLACES_API_KEY=votre_cle_api_google_places
 ```
 
 ### Étape 2 : Build et Déployer
