@@ -16,8 +16,7 @@ import { RestaurantSearch } from './components/Search/RestaurantSearch';
 import { OnboardingWizard } from './components/Onboarding/OnboardingWizard';
 import { EstablishmentSelector } from './components/Establishment/EstablishmentSelector';
 import { MainDashboard } from './components/Dashboard/MainDashboard';
-import { userEstablishmentService } from './services/apiService';
-import { onboardingService } from './services/apiService';
+import { userEstablishmentService, onboardingService, establishmentService } from './services/apiService';
 import './App.css';
 
 /**
@@ -47,7 +46,6 @@ const AppContent: React.FC = () => {
       if (establishments.length > 0 && !currentEstablishmentId) {
         setCurrentEstablishmentId(establishments[0].establishment_id);
         // Charge l'établissement sélectionné
-        const { establishmentService } = await import('./services/apiService');
         const establishment = await establishmentService.getById(establishments[0].establishment_id);
         setSelectedRestaurant({
           id: establishment.id,
@@ -138,7 +136,6 @@ const AppContent: React.FC = () => {
         onRestaurantSelect={async (restaurant) => {
           // Sauvegarde l'établissement et le lie à l'utilisateur
           try {
-            const { establishmentService } = await import('./services/apiService');
             const saved = await establishmentService.create({
               name: restaurant.name,
               google_place_id: restaurant.placeId,
@@ -188,7 +185,6 @@ const AppContent: React.FC = () => {
           currentEstablishmentId={currentEstablishmentId || undefined}
           onSelect={async (establishmentId) => {
             setCurrentEstablishmentId(establishmentId);
-            const { establishmentService } = await import('./services/apiService');
             const establishment = await establishmentService.getById(establishmentId);
             setSelectedRestaurant({
               id: establishment.id,
