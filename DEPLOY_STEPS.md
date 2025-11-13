@@ -28,14 +28,14 @@ Ouvrez `backend/wrangler.toml` et remplacez `YOUR_DATABASE_ID` :
 ```toml
 [[d1_databases]]
 binding = "DB"
-database_name = "restaurant-reviews-db"
+database_name = "hackathondb"
 database_id = "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"  # Votre ID ici
 ```
 
 ## Étape 4 : Appliquer les Migrations
 
 ```bash
-# En production
+# En production (base: hackathondb)
 npm run db:migrate
 
 # Ou en local pour tester

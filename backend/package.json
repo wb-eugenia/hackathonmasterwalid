@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
-    "db:migrate": "wrangler d1 migrations apply restaurant-reviews-db",
-    "db:migrate:local": "wrangler d1 migrations apply restaurant-reviews-db --local",
-    "db:create": "wrangler d1 create restaurant-reviews-db",
+    "db:migrate": "wrangler d1 migrations apply hackathondb",
+    "db:migrate:local": "wrangler d1 migrations apply hackathondb --local",
+    "db:create": "wrangler d1 create hackathondb",
     "deploy": "wrangler deploy",
     "deploy:preview": "wrangler deploy --env preview",
     "tail": "wrangler tail"
