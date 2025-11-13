@@ -20,18 +20,32 @@ export async function apiRequest<T>(
   options: RequestInit = {}
 ): Promise<T> {
   const token = getAuthToken();
-  const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
-    ...(options.headers as Record<string, string> || {}),
-  };
+  const headersInit: HeadersInit = new Headers();
+  headersInit.set('Content-Type', 'application/json');
+  
+  if (options.headers) {
+    if (options.headers instanceof Headers) {
+      options.headers.forEach((value, key) => {
+        headersInit.set(key, value);
+      });
+    } else if (Array.isArray(options.headers)) {
+      options.headers.forEach(([key, value]) => {
+        headersInit.set(key, value);
+      });
+    } else {
+      Object.entries(options.headers).forEach(([key, value]) => {
+        headersInit.set(key, String(value));
+      });
+    }
+  }
 
   if (token) {
-    headers['Authorization'] = `Bearer ${token}`;
+    headersInit.set('Authorization', `Bearer ${token}`);
   }
 
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     ...options,
-    headers,
+    headers: headersInit,
   });
 
   if (!response.ok) {

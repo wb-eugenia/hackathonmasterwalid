@@ -3,12 +3,12 @@
  */
 
 import React, { useState } from 'react';
-import { Establishment } from '../../types';
+import { Restaurant } from '../../types';
 import { onboardingService } from '../../services/apiService';
 import './OnboardingWizard.css';
 
 interface OnboardingWizardProps {
-  establishment: Establishment;
+  establishment: Restaurant;
   onComplete: () => void;
 }
 
