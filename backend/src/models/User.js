@@ -14,16 +14,21 @@ export class User {
    * Crée un nouvel utilisateur
    */
   async create({ email, password, name }) {
-    const id = generateId();
-    const passwordHash = await bcrypt.hash(password, 10);
-    const now = toTimestamp();
+    try {
+      const id = generateId();
+      const passwordHash = await bcrypt.hash(password, 10);
+      const now = toTimestamp();
 
-    await this.db.prepare(
-      `INSERT INTO users (id, email, password_hash, name, created_at, updated_at)
-       VALUES (?, ?, ?, ?, ?, ?)`
-    ).bind(id, email, passwordHash, name || null, now, now).run();
+      await this.db.prepare(
+        `INSERT INTO users (id, email, password_hash, name, email_verified, created_at, updated_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?)`
+      ).bind(id, email, passwordHash, name || null, 0, now, now).run();
 
-    return this.findById(id);
+      return this.findById(id);
+    } catch (error) {
+      console.error('Erreur création utilisateur:', error);
+      throw error;
+    }
   }
 
   /**
@@ -31,7 +36,7 @@ export class User {
    */
   async findById(id) {
     const result = await this.db.prepare(
-      'SELECT id, email, name, created_at FROM users WHERE id = ?'
+      'SELECT id, email, name, email_verified, created_at FROM users WHERE id = ?'
     ).bind(id).first();
 
     return result || null;

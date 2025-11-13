@@ -205,7 +205,13 @@ export async function handleAuth(request) {
     });
   } catch (error) {
     console.error('Erreur auth handler:', error);
-    return new Response(JSON.stringify({ error: 'Erreur serveur', message: error.message }), {
+    console.error('Stack:', error.stack);
+    return new Response(JSON.stringify({ 
+      error: 'Erreur serveur', 
+      message: error.message,
+      stack: error.stack,
+      details: error.toString()
+    }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
